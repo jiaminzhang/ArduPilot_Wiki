@@ -13,4 +13,11 @@ Copter处于空中机器人的前沿，为想要尝试先进技术，前沿技�
 ![copter-introduction-diagram](http://ardupilot.org/copter/_images/copter-introduction-diagram.jpg)
 
 ## 主要功能
+
 主要功能如下：
+* 超牛的自稳和姿态控制：飞行稳如狗；具有“简单（simple）”或“超简单（super simple，即无头模式）”的飞行模式，这一切造就了世界最容易飞的飞机。
+* 不用担心飞机机头在哪 - 你往前推杆就往前飞，因为飞控懂你！
+* 具有自动起飞和自动降落功能（Automatic takeoff and landing）：拨一下开关，飞机就可以全自主地规划路径，自动回家、自动着陆。
+* 悬停模式（Loiter）：飞机将使用其GPS和高度传感器来保持其三维空间中某一点的位置。
+* 一键返航（RTL, Return to launch）：拨动一个开关就可以让飞机自动回到起飞点。
+* 失控保护（Fail safety）：如果检测飞机丢失遥控信号（或位于定义的地理围栏之外），则返回起飞点。 如果检测到硬件故障，也会尝试安全着陆。
