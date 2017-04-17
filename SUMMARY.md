@@ -12,4 +12,4 @@
         * [1.6 用例概述](copter/1_7_Copter-Use-Case-Overview.md) 
     * [2. 首次安装](copter/2_First-Time-Setup.md)
 * [开发者](Dev/Dev.md)
-    * [1. Copter介绍](Dev/1_Working-with-the-ArduPilot-Project-Code.md)
+    * [1. 利用ArduPilot项目做开发](Dev/1_Working-with-the-ArduPilot-Project-Code.md)
