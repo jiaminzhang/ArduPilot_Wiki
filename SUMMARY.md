@@ -12,3 +12,10 @@
         * [1.6 用例概述](copter/1_7_Copter Use-Case Overview.md) 
     * [2. 首次安装](copter/2_First Time Setup.md)
 
+
+* [Introduction](README.md)
+* [项目介绍](1_Getting-Started/introduction.md)
+* [新手上路](1_Getting-Started/getting-started.md)
+    * [初始设置](1_Getting-Started/initial_configuration.md)
+    * [安装工具链](1_Getting-Started/install_toolchain.md)
+        * [MAC OS](1_Getting-Started/macos.md)
