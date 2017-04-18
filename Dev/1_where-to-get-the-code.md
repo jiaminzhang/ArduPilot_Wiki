@@ -30,6 +30,56 @@ Git可在所有主流操作系统上使用，并且存在各种工具使得更�
 
 如果您想了解更多有关git的信息，那么在线有很多很棒的资源。 这里只是几个你可能会发现有用的：
 
-[Try Git](https://try.github.io/levels/1/challenges/1)：基于浏览器的互动教程，用于学习git。
-[Git Ready](http://gitready.com/)：各种难度级别的教程。
+[Try Git](https://try.github.io/levels/1/challenges/1)：基于浏览器的互动教程，用于学习git。\
+[Git Ready](http://gitready.com/)：各种难度级别的教程。\
 [Git SCM Book](http://git-scm.com/book/en/Getting-Started)：介绍和完整文档。
+
+# Fork源码主库
+
+```
+如果您只想编译和测试项目源代码（不进行更改），则可以跳过此步骤，然后clone主项目库（下一节）。
+```
+“Fork”是GitHub将源码库复制到您自己的GitHub帐户的术语(在网上从别人的账户复制到自己网上的账户)。Fork后的源码库保留有关原始项目的信息，以便您可以从中获取更新（并向其提供更改）。如果要将更改提交给主项目，则需要首先创建自己的主ArduPilot库的分支。
+
+Fork主源码库：
+
+* 登录Github并转到https://github.com/ArduPilot/ardupilot。
+* 右上方Fork按钮：\
+![](http://ardupilot.org/dev/_images/APM-Git-Github-Fork-300x641.jpg)\
+点击Fork按钮并按照说明进行操作。
+
+完成后，您的帐户中将会有一个新的源码库：//github.com/your-github-account-name/ardupilot
+
+Fork下来这个源码库，你就可以clone后在本地进行代码更改了。
+
+# Clone源码库
+
+“Clone”是git的术语，用于在您自己的计算机上制作任何源码库的副本（相当于把网上的源码库复制到你自己的电脑硬盘上）。 您可以Clone自己先前Fork下来的源码库（如果要更改源代码）或直接Clone主ArduPilot源码库。
+
+Clone项目所需的信息/工具位于每个库的Github主页的屏幕右侧。\
+![](http://ardupilot.org/dev/_images/APM-Git-Github-Clone.jpg)\
+*GitHub上Clone库的界面*
+
+#### OSX/Linux Terminal:
+* 打开终端并进入要clone项目的目录
+* Clone你Fork下来的项目：
+```
+git clone https://github.com/your-github-account-name/ardupilot
+cd ardupilot
+git submodule update --init --recursive
+```
+或者直接在主项目clone:
+```
+git clone https://github.com/ArduPilot/ardupilot
+cd ardupilot
+git submodule update --init --recursive
+```
+
+#### Windows (GitHub GUI): 
+* 在浏览器中打开[ardupilot/ardupilot](https://github.com/ArduPilot/ardupilot)存储库
+* 点击右下角的“Clone in Desktop”按钮
+![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows1.png)
+* 如果你以前没有安装GitHub：
+  * 当被带到windows.github.com页面时，按下右上角的“download”按钮 
+  ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_DownloadGithub.png)
+  * 将**GitHubSetup.exe**下载到电脑上，然后按照说明安装GitHub客户端 
