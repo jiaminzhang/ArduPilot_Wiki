@@ -14,7 +14,8 @@ ArduPilot项目使用[Git](https://git-scm.com/)进行源代码管理，使用[G
 MissionPlanner的库在[ardupilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner)。
 
 ```
-由于历史遗留问题，老版本的Google Code库还在网上存在，除非您特别需要较旧的（APM 1.x）资源，否则不要使用它。
+由于历史遗留问题，老版本的Google Code库还在网上存在，\
+除非您特别需要较旧的（APM 1.x）资源，否则不要使用它。
 ```
 
 # 必备条件
@@ -88,3 +89,8 @@ git submodule update --init --recursive
   * 当被带到windows.github.com页面时，按下右上角的“download”按钮 
   ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_DownloadGithub.png)
   * 将**GitHubSetup.exe**下载到电脑上，然后按照说明安装GitHub客户端 
+  * 在GitHub客户端上，单击右箭头按钮可查看最近提交的列表或鼠标右键单击ardupilot / ardupilot库并点击“open in explorer”，在资源管理器中打开。 
+  ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_OpenGithub.png)
+  * 您现在也可以在自己喜欢的编辑器中打开文件，例如[NotePad ++](https://notepad-plus-plus.org/)，[Sublime Text](http://www.sublimetext.com/)或[Acme](http://acme.cat-v.org/)。 
+  
+## 编译代码
