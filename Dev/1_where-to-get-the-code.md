@@ -45,8 +45,10 @@ Git可在所有主流操作系统上使用，并且存在各种工具使得更�
 Fork主源码库：
 
 * 登录Github并转到https://github.com/ArduPilot/ardupilot。
-* 右上方Fork按钮：\
-![](http://ardupilot.org/dev/_images/APM-Git-Github-Fork-300x641.jpg)\
+* 右上方Fork按钮：
+
+![](http://ardupilot.org/dev/_images/APM-Git-Github-Fork-300x641.jpg)
+
 点击Fork按钮并按照说明进行操作。
 
 完成后，您的帐户中将会有一个新的源码库：//github.com/your-github-account-name/ardupilot
@@ -57,8 +59,10 @@ Fork下来这个源码库，你就可以clone后在本地进行代码更改了�
 
 “Clone”是git的术语，用于在您自己的计算机上制作任何源码库的副本（相当于把网上的源码库复制到你自己的电脑硬盘上）。 您可以Clone自己先前Fork下来的源码库（如果要更改源代码）或直接Clone主ArduPilot源码库。
 
-Clone项目所需的信息/工具位于每个库的Github主页的屏幕右侧。\
-![](http://ardupilot.org/dev/_images/APM-Git-Github-Clone.jpg)\
+Clone项目所需的信息/工具位于每个库的Github主页的屏幕右侧。
+
+![](http://ardupilot.org/dev/_images/APM-Git-Github-Clone.jpg)
+
 *GitHub上Clone库的界面*
 
 #### OSX/Linux Terminal:
