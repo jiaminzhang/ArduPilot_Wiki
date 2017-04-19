@@ -18,7 +18,7 @@ MissionPlanner的库在[ardupilot/MissionPlanner](https://github.com/ArduPilot/M
 除非您特别需要较旧的（APM 1.x）资源，否则不要使用它。
 ```
 
-# 必备条件
+## 必备条件
 
 ArduPilot项目使用git进行源代码管理。
 
@@ -26,7 +26,7 @@ Git可在所有主流操作系统上使用，并且存在各种工具使得更�
 
 如果您期望将代码提交到官方APM源代码库，则需要使用Github注册一个免费的用户帐户。
 
-# 学习使用Git
+## 学习使用Git
 
 本指南介绍了使用项目所需的基本git命令/概念：clone，branch，commit，push。
 
@@ -36,7 +36,7 @@ Git可在所有主流操作系统上使用，并且存在各种工具使得更�
 [Git Ready](http://gitready.com/)：各种难度级别的教程。\
 [Git SCM Book](http://git-scm.com/book/en/Getting-Started)：介绍和完整文档。
 
-# Fork源码主库
+## Fork源码主库
 
 ```
 如果您只想编译和测试项目源代码（不进行更改），则可以跳过此步骤，然后clone主项目库（下一节）。
@@ -56,7 +56,7 @@ Fork主源码库：
 
 Fork下来这个源码库，你就可以clone后在本地进行代码更改了。
 
-# Clone源码库
+## Clone源码库
 
 “Clone”是git的术语，用于在您自己的计算机上制作任何源码库的副本（相当于把网上的源码库复制到你自己的电脑硬盘上）。 您可以Clone自己先前Fork下来的源码库（如果要更改源代码）或直接Clone主ArduPilot源码库。
 
