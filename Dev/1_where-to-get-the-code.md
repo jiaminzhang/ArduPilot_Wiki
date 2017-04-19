@@ -84,7 +84,7 @@ git submodule update --init --recursive
 #### Windows (GitHub GUI): 
 * 在浏览器中打开[ardupilot/ardupilot](https://github.com/ArduPilot/ardupilot)存储库
 * 点击下图中的的“Open in Desktop”按钮
-![](/dev/Open-in-desktop.png)
+![](/Dev/Open-in-desktop.png)
 * 如果你以前没有安装GitHub：
   * 当被带到windows.github.com页面时，按下右上角的“download”按钮 
   ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_DownloadGithub.png)
