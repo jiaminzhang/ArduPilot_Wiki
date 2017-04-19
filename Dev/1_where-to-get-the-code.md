@@ -94,3 +94,5 @@ git submodule update --init --recursive
   * 您现在也可以在自己喜欢的编辑器中打开文件，例如[NotePad ++](https://notepad-plus-plus.org/)，[Sublime Text](http://www.sublimetext.com/)或[Acme](http://acme.cat-v.org/)。 
   
 ## 编译代码
+
+ArduPilot支持在Linux，Windows和Mac OSX上编译多旋翼、车、固定翼等机型的源码。有关如何为特定目标编译生成固件，请参阅构建代码。
