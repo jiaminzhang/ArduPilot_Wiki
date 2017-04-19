@@ -62,7 +62,7 @@ Fork下来这个源码库，你就可以clone后在本地进行代码更改了�
 
 Clone项目所需的信息/工具位于每个库的Github主页的屏幕右侧。
 
-![](http://ardupilot.org/dev/_images/APM-Git-Github-Clone.jpg)
+![](/Dev/clone.png)
 
 *GitHub上Clone库的界面*
 
