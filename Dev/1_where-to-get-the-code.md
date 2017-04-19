@@ -86,8 +86,8 @@ git submodule update --init --recursive
 * 点击下图中的的“Open in Desktop”按钮
 ![](/Dev/Open-in-desktop.png)
 * 如果你以前没有安装GitHub：
-  * 当被带到windows.github.com页面时，按下右上角的“download”按钮 
-  ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_DownloadGithub.png)
+  * 当被带到desktop.github.com页面时，按图中的“Download GitHub Destop”按钮 
+  ![](/Dev/download-github.png)
   * 将**GitHubSetup.exe**下载到电脑上，然后按照说明安装GitHub客户端 
   * 在GitHub客户端上，单击右箭头按钮可查看最近提交的列表或鼠标右键单击ardupilot / ardupilot库并点击“open in explorer”，在资源管理器中打开。 
   ![](http://ardupilot.org/dev/_images/CloningTheRepository_Windows_OpenGithub.png)
