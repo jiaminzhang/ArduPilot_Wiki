@@ -1,17 +1,17 @@
 # 利用make在Windows上编译ArduPilot源码，生成支持Pixhawk/PX4的固件
 
-本文介绍如何使用*Make*构建适用于Pixhawk 2，Pixhawk和PX4的ArduPilot。
+本文介绍如何使用*Make*编译生成适用于Pixhawk 2，Pixhawk和PX4的ArduPilot固件。
 
 ```
 用于构建Pixhawk和Pixhawk2的命令是相同的（使用px4-v2）。 除了Pixracer使用px4-v4之外，其余构建是一样的。
-对于旧的（过时）PX4使用make px4-v1。
+对于旧的（老版本的）PX4使用make px4-v1。
 ```
 
 ## 构建说明
 
-1. 安装[GitHub for Windows](GitHub for Windows)
+1. 安装[GitHub for Windows](http://windows.github.com/)
 2. 确保您的github设置关闭了换行自动转换功能
-  * 当您安装Git时，也会安装“Git Shell（或Bash）”终端。 点击安装后的“Git Shell（或Bash）”图标，并在Git“MINGW32”终端窗口中输入以下内容：
+  * 当您安装Git时，也会安装“Git Shell（或Bash）”终端。点击安装后的“Git Shell（或Bash）”图标，并在Git“MINGW32”终端窗口中输入以下内容：
   ```
   git config --global core.autocrlf false
   ```
@@ -21,16 +21,16 @@
 
 初始化和更新子模块
 ```
-git submodule update --init --recursive
+git submodule update --init --recursive  // 这句命令将会下载PX4Firmware、PX4Nutxx、uavcan等相关子模块
 ```
 
 下载并安装*PX4 toolchain *[pixhawk_toolchain_installer_latest.exe](http://firmware.ardupilot.org/Tools/PX4-tools/pixhawk_toolchain_installer_latest.exe)
 
 安装成功后打开*PX4Console*并进入目标目录：
 
-* 启动*PX4Console*。这可以在*开始=>所有程序=>PX4 Toolchain*（Windows 7电脑），或者您可以直接去C：\ px4 \ toolchain \ msys \ 1.0 \ px4_console.bat打开。
+* 启动*PX4Console*。这可以在*开始=>所有程序=>PX4 Toolchain*（Windows 7电脑），或者您可以直接去C:\px4\toolchain\msys\1.0\px4_console.bat打开。
 
-* 在PX4Console中导航到特定的ArduPilot目录。 例如，要构建多旋翼，请导航到：
+* 在PX4Console中导航到特定的ArduPilot目录。 例如，要编译生成多旋翼固件，请导航到：
 ```
 cd /c/Users/<username>/Documents/GitHub/ardupilot/ArduCopter
 ```
@@ -53,11 +53,11 @@ make px4-v2-upload  | 构建并烧录Pixhawk的四旋翼固件（即无需使用
 * 使用Mission Planner地面站：*初始设置*=>*安装固件*，点击安装固件屏幕的*加载自定义固件*。
 ```
 当您编译项目源码时，ArduPilot将添加（PX4Firmware，PX4NuttX，uavcan）作为git子模块。 
-如果您在更改子模块之前编译项目源码，您可能会遇到意想不到的错误。 有关故障排除错误信息，请参阅Git子模块。
+如果您在更改子模块之前（没有git submodule update --init --recursive）编译项目源码，您可能会遇到意想不到的错误。 
+有关故障排除错误信息，请参阅Git子模块。
 ```
 ```
-您可以忽略有关PX4Firmware和PX4Nuttx提示的任何消息。 这些消息是为开发人员提示准备的，
-但可选，有时编译代码时无法在系统上找到它们。 
+您可以忽略有关PX4Firmware和PX4Nuttx提示的任何消息。 这些消息是为开发人员提示准备的，但可选，有时编译代码时无法在系统上找到它们。 
 只要编译后它说“Firmware is in xxx.px4文件(xxx是你的固件类型)，那么你就成功的编译，你可以放心地烧录到你的飞机上。
 ```
 
