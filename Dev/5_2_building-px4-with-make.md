@@ -10,13 +10,13 @@
 ## 构建说明
 
 1. 安装[GitHub for Windows](GitHub for Windows)
-2. 确保您的github设置关闭了换行自动转换
+2. 确保您的github设置关闭了换行自动转换功能
   * 当您安装Git时，也会安装“Git Shell（或Bash）”终端。 点击安装后的“Git Shell（或Bash）”图标，并在Git“MINGW32”终端窗口中输入以下内容：
   ```
   git config --global core.autocrlf false
   ```
 3. 将ardupilot源码库clone到您的计算机上： 
-  * 转到GitHub / ArduPilot / ardupilot网页，然后单击“桌面上的克隆”按钮
+  * 转到[GitHub / ArduPilot / ardupilot](https://github.com/ArduPilot/ardupilot)网页，然后单击“Clone or download”按钮
   * 警告：请注意目录路径小于50个字符。 例如“C：\ Users \ rmackay9 \ Documents \ GitHub \ ardupilot”足够短，但“C：\ Users \ rmackay9 \ Documents \ GitHub \ rmackay9-ardupilot”太长。 这个限制是因为在编译过程中创建的临时文件的路径长度可以超过Windows的260字符路径限制。
 
 初始化和更新子模块
@@ -24,7 +24,7 @@
 git submodule update --init --recursive
 ```
 
-下载并安装*PX4 toolchain*[pixhawk_toolchain_installer_latest.exe](http://firmware.ardupilot.org/Tools/PX4-tools/pixhawk_toolchain_installer_latest.exe)
+下载并安装*PX4 toolchain *[pixhawk_toolchain_installer_latest.exe](http://firmware.ardupilot.org/Tools/PX4-tools/pixhawk_toolchain_installer_latest.exe)
 
 安装成功后打开*PX4Console*并进入目标目录：
 
