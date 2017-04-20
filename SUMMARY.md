@@ -13,6 +13,8 @@
     * [2. 首次安装](copter/2_First-Time-Setup.md)
 * [开发者](Dev/Dev.md)
     * [1. 利用ArduPilot项目做开发](Dev/1_where-to-get-the-code.md)
+    * [2. ArduPilot代码架构](Dev/2_learning-the-ardupilot-codebase.md)
+        * [2.1 简介](Dev/2_1_learning-ardupilot-introduction.md)
     * [5. 编译代码](Dev/5_building-the-code.md)
         * [5.1 利用Bash在Windows10上编译](Dev/5_1_building-ardupilot-onwindows10.md)
         * [5.2 利用make在Windows上编译](Dev/5_2_building-px4-with-make.md)
