@@ -68,6 +68,7 @@
 ## 指定make目标
 
 在右侧的“Make target”窗口中，创建任何这些目标（可以在px4_targets.mk中找到可能的目标的完整列表）：
+
 命令   |  说明
 ---|---
 make px4-v2   | 为四旋翼（Quad）编译Pixhawk / Pixhawk2可以固件（二者相同）
