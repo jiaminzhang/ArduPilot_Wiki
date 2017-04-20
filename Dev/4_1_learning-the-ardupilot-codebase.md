@@ -9,13 +9,13 @@
 
 ArduPilot的基本结构分为5个主要部分：
 
-* 不同飞机的代码(ArduCopter、ArduPlane登)
+* 机型代码(ArduCopter、ArduPlane登)
 * 共享库（shared libraries）
 * 硬件抽象层（AP_HAL）
-* 工具目录
+* 工具目录（Tools）
 * 外部支持代码（如mavlink，dronekit）
 
-## 飞机代码
+## 不同机型代码
 
 下载的源码目录下包含多种机型的代码，主要分为4大类：Plane, Copter, APMrover2 和 AntennaTracker.。虽然不同机型之间有很多共同的要素，但它们各有不同。 现在我们只详细说明Copter的代码。
 
