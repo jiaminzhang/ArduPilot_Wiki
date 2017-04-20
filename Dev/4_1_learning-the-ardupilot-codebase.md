@@ -39,7 +39,6 @@ AP_HAL层（硬件抽象层）是为了使ArduPilot兼容不同平台。librarie
 在某些平台上，我们需要外部支持代码来提供额外的功能或板级支持。目前的扩展部分是：
 
 [PX4NuttX](https://github.com/ArduPilot/PX4NuttX) - Pixhawk板上使用的核心NuttX RTOS。
-
 [PX4Firmware](https://github.com/ArduPilot/PX4Firmware) - Pixhawk主板上使用的基本PX4中间件和驱动程序。
 
 [uavcan](https://github.com/ArduPilot/uavcan) - 在ArduPilot中使用的uavcan CANBUS实现。
@@ -47,5 +46,5 @@ AP_HAL层（硬件抽象层）是为了使ArduPilot兼容不同平台。librarie
 [mavlink](https://github.com/mavlink/mavlink) - mavlink协议和代码生成器。
 
 ```
-当您构建ArduPilot时，它们中的大多数都作为Git子模块入。
+当您构建ArduPilot时，它们中的大多数都作为Git子模块导入。
 ```
