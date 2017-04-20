@@ -68,6 +68,16 @@
 ## 指定make目标
 
 在右侧的“Make target”窗口中，创建任何这些目标（可以在px4_targets.mk中找到可能的目标的完整列表）：
+命令   |  说明
+---|---
+make px4-v2   | 为四旋翼（Quad）编译Pixhawk / Pixhawk2可以固件（二者相同）
+make px4-v4   | 为四旋翼（Quad）编译PixRacer固件
+make px4-v2-hexa  | 编译一个六旋翼的Pixhawk固件。＃其他支持的后缀包括“octa”（六旋翼），“octa-quad”，“tri”（三旋翼），“single”（单旋翼）和“heli”（直升机）。＃更多可以在“mk / targets.mk”中找到
+make px4   | 构建用于四角直升机的PX4（过时）和PixHawk固件
+make clean  | “清理”ardupilot目录
+make px4-clean  | “清洁”PX4Firmware和PX4NuttX目录，以便下次的构建将完全重建它们
+make px4-cleandep   |	来自PX4Firmware和PX4NuttX目录的“clean”.d和.o文件。 与“px4-clean”相比，更快但不太完整的重建
+make px4-v2-upload  | 构建并烧录Pixhawk的四旋翼固件（即无需使用地面站上传）
 
 例如，下图显示了如何定义px4-v2 make目标。
 ![](http://ardupilot.org/dev/_images/EditingTheCode_Eclipse3.png)
