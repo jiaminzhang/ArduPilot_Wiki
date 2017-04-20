@@ -44,5 +44,5 @@ AP_HAL层（硬件抽象层）是为了使ArduPilot兼容不同平台。librarie
 [mavlink](https://github.com/mavlink/mavlink) - mavlink协议和代码生成器 
 
 ```
-当您[构建ArduPilot](Dev/5_Building the code.md)时，它们中的大多数都作为[Git子模块](Dev/5_14_building-the-code.md)入。
+当您构建ArduPilot时，它们中的大多数都作为Git子模块入。
 ```
