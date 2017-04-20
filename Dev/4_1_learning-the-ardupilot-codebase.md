@@ -1,7 +1,7 @@
 # 介绍
 
 本页介绍了ArduPilot代码的基本结构。在开始之前，您应该想明白你要用代码中的哪一部分。您只需使用浏览器登录https://github.com/ArduPilot/ardupilot/ ，就能看到源码文件目录，可以选择下载某一部分，但如果用git克隆的话，你会下载所有源码库。
-你可以使用一款好用的开发者IDE打开下载的源码,[点击查看推荐软件](Dev/code-editing-tools-and-ides.md)。
+你可以使用一款好用的开发者IDE打开下载的源码，[推荐软件](Dev/code-editing-tools-and-ides.md)。
 
 ## 基础架构
 
