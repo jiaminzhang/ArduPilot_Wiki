@@ -11,8 +11,6 @@
 | **规格** | [产品描述](https://store.3drobotics.com/products/3dr-pixhawk#product-description) |
 |  | **操作系统:** |
 |  | NuttX |
-|  | **操作系统:** |
-|  | NuttX |
 |  | **CPU:** |
 |  | 32-bit STM32F427 Cortex M4 core with FPU |
 |  | 32 bit STM32F103 failsafe co-processor |
