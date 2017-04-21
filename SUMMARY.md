@@ -14,6 +14,7 @@
 * [开发者](Dev/Dev.md)
     * [1. 利用ArduPilot项目做开发](Dev/1_where-to-get-the-code.md)
     * [2. 许可证（GPLv3）](Dev/2_license-gplv3.md)
+    * [3. ArduPilot支持的控制器](Dev/3_supported-autopilot-controller-boards.md)
     * [4. ArduPilot代码架构](Dev/4_learning-the-ardupilot-codebase.md)
         * [4.1 简介](Dev/4_1_learning-ardupilot-introduction.md)
     * [5. 编译代码](Dev/5_building-the-code.md)
