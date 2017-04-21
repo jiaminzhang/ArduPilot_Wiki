@@ -40,10 +40,10 @@
 |  | All peripheral outputs over-current |
 |  | protected, all inputs ESD protected |
 |  | **重量和尺寸:** |
-|  | Weight: 38g \(1.31oz\) |
-|  | Width: 50mm \(1.96"\) |
-|  | Thickness: 15.5mm \(.613"\) |
-|  | Length: 81.5mm \(3.21"\) |
+|  | Weight: 38g (1.31oz) |
+|  | Width: 50mm (1.96") |
+|  | Thickness: 15.5mm (.613") |
+|  | Length: 81.5mm (3.21") |
 | **Setup** | [Pixhawk 概述](http://copter.ardupilot.com/common-pixhawk-overview/#specifications), [供电](http://copter.ardupilot.com/wiki/common-powering-the-pixhawk/) |
 | **Design files** | [原理图](http://firmware.ardupilot.org/downloads/wiki/pdf_guides/px4fmuv2.4.3_schematic.pdf) |
 |  | [Layout层](http://firmware.ardupilot.org/downloads/wiki/pdf_guides/Pixhawk-Open-Hardware.zip) |
