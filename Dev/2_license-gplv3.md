@@ -28,7 +28,7 @@ ArduPilot（包括Copter, Plane, Rover和AntennaTracker）和Mission Planner是�
 * 对项目的bug修复和扩展（或至少提供这些修复给客户）的要求增加了贡献者之间的合作。 没有这个要求，参与者试图对自己进行小的改进，以获得比其他贡献者更多的优势。 有证据表明，这很快就导致了许多不符合项目的难题，造成了所有人的损害。
 
 Linus Torvalds（Linux的发明者）同意这一观点。
-！[](http://ardupilot.org/dev/_images/license-linus-quote.png)
+![](http://ardupilot.org/dev/_images/license-linus-quote.png)
 
 * 许可证的“v3”部分确保购买飞机的客户有权在飞行控制器上升级或更换ArduPilot软件版本。 许可证不要求它实际工作，只是让升级成为可能。 这确保即使制造商停止支持产品（这种情况时常发生），如果使用者或社区的开发人员决定接受支持，产品仍将继续有用。 这样的例子已经发生在ArduPilot。
 
