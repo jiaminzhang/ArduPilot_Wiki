@@ -6,10 +6,10 @@
 
 ArduPilot项目使用[Git](https://git-scm.com/)进行源代码管理，使用[GitHub](https://github.com/)用于源代码托管。
 
-想要为ArduPilot项目做贡献的开发者可以在GitHub上Fork下来项目源码，在自己Fork下来的项目中创建一个branch分支，添加新功能，然后将更改pull request到“master”项目中。对于只需要使用和编译的开发者，可以从GitHub上clone下来master库，build后使用就可以了。
+想要为ArduPilot项目做贡献的开发者可以在GitHub上Fork下来项目源码，在自己Fork下来的项目中创建一个分支（branch），添加新功能后，将更改pull request到“master”主项目中。对于只需要使用和编译的开发者，可以从GitHub上clone下来master库，build后使用就可以了。
 
-用于固定翼（Plane），旋翼飞机（Copter），小车（Rover）和穿越机（Antenna Tracker）的ArduPilot项目源代码都可以在https://github.com/ArduPilot/ardupilot 上下载。 PX4平台（即PX4v1和Pixhawk）使用了一些额外的项目：
-[PX4Firmware](https://github.com/ArduPilot/PX4Firmware)，[PX4NuttX](https://github.com/ArduPilot/PX4NuttX)，[uavcan](https://github.com/ArduPilot/uavcan) - 在构建项目时，这些项目会被导入为[Git子模块]()。
+用于固定翼（Plane），旋翼飞机（Copter），小车（Rover）和天线跟踪器（Antenna Tracker）的ArduPilot项目源代码都可以在https://github.com/ArduPilot/ardupilot 上下载。 PX4平台（即PX4v1和Pixhawk）使用了一些额外的项目：
+[PX4Firmware](https://github.com/ArduPilot/PX4Firmware)，[PX4NuttX](https://github.com/ArduPilot/PX4NuttX)，[uavcan](https://github.com/ArduPilot/uavcan) - 在构建项目时，这些项目会被导入为[Git子模块](Dev/5_14_git-submodules.md)。
 
 MissionPlanner的库在[ardupilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner)。
 
@@ -18,7 +18,7 @@ MissionPlanner的库在[ardupilot/MissionPlanner](https://github.com/ArduPilot/M
 除非您特别需要较旧的（APM 1.x）资源，否则不要使用它。
 ```
 
-## 必备条件
+## 前提条件
 
 ArduPilot项目使用git进行源代码管理。
 
@@ -39,7 +39,8 @@ Git可在所有主流操作系统上使用，并且存在各种工具使得更�
 ## Fork源码主库
 
 ```
-如果您只想编译和测试项目源代码（不进行更改），则可以跳过此步骤，然后clone主项目库（下一节）。
+如果您只想编译和测试项目源代码（不进行更改），
+则可以跳过此步骤，只需clone主项目库（后面章节会有介绍）。
 ```
 “Fork”是GitHub将源码库复制到您自己的GitHub帐户的术语(在网上从别人的账户复制到自己网上的账户)。Fork后的源码库保留有关原始项目的信息，以便您可以从中获取更新（并向其提供更改）。如果要将更改提交给主项目，则需要首先创建自己的主ArduPilot库的分支。
 
