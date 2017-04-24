@@ -66,10 +66,10 @@ mavproxy.py --setup --master /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v2.x_0-if
 
 最常用的hal功能有：
 
-* hal.console-> printf（）来打印字符串
-* AP_HAL :: millis（）和AP_HAL :: micros（）从引导开始获取时间
-* hal.scheduler-> delay（）和hal.scheduler-> delay_microseconds（）实现短时间延时
-* halgpio-> pinMode（），hal.gpio-> read（）和hal.gpio-> write（）用于访问GPIO引脚
+* hal.console-> printf()来打印字符串
+* AP_HAL :: millis()和AP_HAL :: micros()从引导开始获取时间
+* hal.scheduler-> delay()和hal.scheduler-> delay_microseconds()实现短时间延时
+* halgpio-> pinMode()，hal.gpio-> read()和hal.gpio-> write()用于访问GPIO引脚
 * I2C通过hal.i2c访问
 * SPI通过hal.spi访问
 
