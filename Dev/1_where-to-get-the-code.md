@@ -6,12 +6,12 @@
 
 ArduPilot项目使用[Git](https://git-scm.com/)进行源代码管理，使用[GitHub](https://github.com/)用于源代码托管。
 
-想要为ArduPilot项目做贡献的开发者可以在GitHub上Fork下来项目源码，在自己Fork下来的项目中创建一个分支（branch），添加新功能后，将更改pull request到“master”主项目中。对于只需要使用和编译的开发者，可以从GitHub上clone下来master库，build后使用就可以了。
+想要为ArduPilot项目做贡献的开发者可以在GitHub上Fork下来项目源码，在自己Fork下来的项目中创建一个分支（branch），添加新功能后，将更改pull request到“master”主项目中。对于只需要使用和编译的开发者，可以从GitHub上clone下来master库，编译后使用就可以了。
 
 用于固定翼（Plane），旋翼飞机（Copter），小车（Rover）和天线跟踪器（Antenna Tracker）的ArduPilot项目源代码都可以在[https://github.com/ArduPilot/ardupilot](https://github.com/ArduPilot/ardupilot) 上下载。 PX4平台（即PX4v1和Pixhawk）使用了一些额外的项目：  
 [PX4Firmware](https://github.com/ArduPilot/PX4Firmware)，[PX4NuttX](https://github.com/ArduPilot/PX4NuttX)，[uavcan](https://github.com/ArduPilot/uavcan) - 在构建项目时，这些项目会被导入为[Git子模块](Dev/5_14_git-submodules.md)。
 
-MissionPlanner的库在[ardupilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner)。
+MissionPlanner的源代码在[ardupilot/MissionPlanner](https://github.com/ArduPilot/MissionPlanner)。
 
 ```
 由于历史遗留问题，老版本的Google Code库还在网上存在，
@@ -68,7 +68,7 @@ Clone项目所需的信息/工具位于每个库的Github主页的屏幕右侧�
 
 _GitHub上Clone库的界面_
 
-#### OSX/Linux Terminal:
+#### OSX/Linux Terminal/PX4 Console for windows:
 
 * 打开终端并进入要clone项目的目录
 * Clone你Fork下来的项目：
@@ -80,10 +80,12 @@ _GitHub上Clone库的界面_
 
   或者直接在主项目clone:
   ```
-  git clone https://github.com/ArduPilot/ardupilot
+  git clone https://github.com/ArduPilot/ardupilot      
   cd ardupilot
   git submodule update --init --recursive
   ```
+  
+注：第一行代码是从gtihub源码库的master库clone源代码，master库下载后并不能编译通过，它缺少PX4Firmware，PX4NuttX，gbenchmark，gtest，mavlink，uavcan，waf这七个子模块。所以必须要执行第二行和第三行代码来下载以上七个子模块，此时才可编译通过。
 
 #### Windows \(GitHub GUI\):
 
