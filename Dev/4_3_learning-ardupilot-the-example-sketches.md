@@ -18,7 +18,7 @@ cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
 ```
 执行结果如下图：
 
-![](Dev/waf-px4-v2.png)
+![](/Dev/waf-px4-v2.png)
 
 构建examples/INS_generic，并烧录到飞控中：
 ```
@@ -26,11 +26,11 @@ cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
 ```
 提示重新插拔USB：
 
-![](Dev/waf-upload.png)
+![](/Dev/waf-upload.png)
 
 执行成功结果如下图：
 
-![](Dev/waf-build.png)
+![](/Dev/waf-build.png)
 
 waf可以列出它可以构建的示例：
 
