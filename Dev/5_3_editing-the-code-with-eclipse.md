@@ -55,7 +55,7 @@
 默认情况下，Copter，Plane 和Rover 将使用空格代替制表符。 这可以通过更改两个设置在Eclipse中设置：
 
 * 选择 Window | Preferences | General | Editors | Text Editors | Insert spaces for tabs.
-！[](http://ardupilot.org/dev/_images/EditingTheCode_Eclipse_spaces1.png)
+![](http://ardupilot.org/dev/_images/EditingTheCode_Eclipse_spaces1.png)
 * 选择 Windows | Preferences | C/C++ | Code Style | Formatter，点击New创建一个新的 (例如 “K&R Tab”)，“Indentation” 中设置为“Spaces only”
 ![](http://ardupilot.org/dev/_images/EditingTheCode_Eclipse_spaces2.png)
 
