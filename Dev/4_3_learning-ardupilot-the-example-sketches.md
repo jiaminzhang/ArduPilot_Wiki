@@ -75,21 +75,21 @@ mavproxy.py --setup --master /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v2.x_0-if
 
 您可以去libraries/AP_HAL路径下，查看HAL可用功能的完整列表。
 
-#### setup（）和loop（）函数
+#### setup()和loop()函数
 
-您将注意到，每个草图都有一个setup（）函数和loop（）函数。 板子启动时调用setup（）函数。 实际的调用来自每个电路板的HAL，所以main（）函数隐藏在HAL中，然后在板子特定启动完成后调用setup（）。
+您将注意到，每个草图都有一个setup()函数和loop()函数。 板子启动时调用setup()函数。 实际的调用来自每个电路板的HAL，所以main()函数隐藏在HAL中，然后在板子特定启动完成后调用setup（）。
 
-setup（）函数只调用一次，用来初始化库，您可以打印一个“hello”来显示它运行正常。
+setup()函数只调用一次，用来初始化库，您可以打印一个“hello”来显示它运行正常。
 
-在setup（）完成之后，loop（）函数被连续调用（通过AP_HAL中的主代码）。 草图的主要工作通常在loop（）函数中。
+在setup()完成之后，loop()函数被连续调用（通过AP_HAL中的主代码）。 草图的主要工作通常在loop()函数中。
 
-请注意，这个setup（）/ loop（）安排只是更复杂的电路板的冰山一角。 这可能使得ArduPilot看起来像是单线程的，但事实上还有更多的事情发生，而在具有线程（如PX4和Linux的主板）的板上，实际上将会有很多实时线程启动。 请参阅下面了解ArduPilot线程的部分。
+请注意，这个setup()/ loop()安排只是更复杂的电路板的冰山一角。 这可能使得ArduPilot看起来像是单线程的，但事实上还有更多的事情发生，而在具有线程（如PX4和Linux的主板）的板上，实际上将会有很多实时线程启动。 请参阅下面了解ArduPilot线程的部分。
 
-## AP_HAL_MAIN（）宏
+## AP_HAL_MAIN()宏
 
 你会注意到每个草图底部都有一条这样的一行代码：
 
-AP_HAL_MAIN（）;
+AP_HAL_MAIN();
 这是一个HAL宏，它生成必要的代码来声明一个C ++主函数，以及HAL的任何板级初始化代码。 你无需关心它是如何工作的，但如果你想继续深究，你可以在每个HAL的AP_HAL_XXX目录中查找#define。 它通常在AP_HAL_XXX_Main.h中。
 
 ## 粗略示例代码
