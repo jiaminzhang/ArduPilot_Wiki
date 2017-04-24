@@ -60,7 +60,7 @@ ArduPilot支持来自不同制造商的各种传感器。 [测距仪](http://ard
 
 ## 驱动程序的运行方式和什么时候被调用
 
-![])(http://ardupilot.org/dev/_images/copter-code-overview-architecture2.png)
+![](http://ardupilot.org/dev/_images/copter-code-overview-architecture2.png)
 
 上图显示了ardupilot架构的放大视图。 左上角的蓝色框显示了传感器驱动程序的后端是如何在后台线程中运行的。 收集来自传感器的原始数据，转换为标准单位，然后保持在驱动=的缓冲区内。
 
