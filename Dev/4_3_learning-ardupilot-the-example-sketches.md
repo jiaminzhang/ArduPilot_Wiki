@@ -25,9 +25,11 @@ cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
 ./waf build --target examples/INS_generic --upload
 ```
 提示重新插拔USB：
+
 ![](Dev/waf-upload.png)
 
 执行成功结果如下图：
+
 ![](Dev/waf-build.png)
 
 waf可以列出它可以构建的示例：
