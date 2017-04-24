@@ -13,7 +13,7 @@ blending
 * [AP_WPNav](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_InertialNav) - 航点导航库
 * [AP_Motors](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_Motors) - 多旋翼和传统直升机电机混合
 * [RC_Channel](https://github.com/ArduPilot/ardupilot/tree/master/libraries/RC_Channel) - 将pwm输入/输出从APM_RC转换为内部单位，如角度
-* [AP_HAL, AP_HAL_AVR, AP_HAL_PX4](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_HAL_AVR) - 实现了“硬件抽象层”的库，它提供了一值的接口与更高层通信，使其可以更容易地移植到不同的硬件上。
+* [AP_HAL, AP_HAL_AVR, AP_HAL_PX4](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_HAL_AVR) - 实现了“硬件抽象层”的库，它提供了一致的接口与更高层通信，使其可以更容易地移植到不同的硬件上。
     
 ### 传感器驱动库:
 
