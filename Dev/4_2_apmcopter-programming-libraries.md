@@ -21,7 +21,7 @@ blending
 * [AP_RangeFinder](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_RangeFinder) - 声呐和ir距离传感器接口库
 * [AP_Baro](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_Baro) - 气压计接口库
 * [AP_GPS](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_GPS) - gps接口库
-* [AP_Compass](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_Compass) - 轴磁力计接口库
+* [AP_Compass](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_Compass) - 3轴磁力计接口库
 * [AP_OpticalFlow](https://github.com/ArduPilot/ardupilot/tree/master/libraries/AP_OpticalFlow) - 光流传感器接口库
 
 ### 其他库:
