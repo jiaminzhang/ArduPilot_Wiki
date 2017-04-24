@@ -10,13 +10,25 @@
 * libraries/AP_Baro/examples/BARO_generic
 * libraries/AP_AHRS/examples/AHRS_Test
 
-例如，以下操作将在Pixhawk上构建并安装AP_GPS示例草图：
+例如，以下操作将在Pixhawk上构建并安装AP_GPS示例草图：（上述命令在windows平台下的PX4 Console下不能执行，需要在Linux平台下（或者在Windows10下的Ubuntu下））
 
 ```
-cd $ARDUPILOT_HOME # AruPilot库的顶级目录
+cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
 ./waf configure --board=px4-v2
+```
+执行结果如下图：
+
+![](Dev/waf-px4-v2.png)
+
+构建examples/INS_generic，并烧录到飞控中：
+```
 ./waf build --target examples/INS_generic --upload
 ```
+提示重新插拔USB：
+![](Dev/waf-upload.png)
+
+执行成功结果如下图：
+![](Dev/waf-build.png)
 
 waf可以列出它可以构建的示例：
 
@@ -25,7 +37,8 @@ cd $ARDUPILOT_HOME
 ./waf list | grep 'examples'
 ```
 
-烧录完示例后，您可以通过连接到控制台来查看输出。 控制台取决于电路板的类型。 在PX4板（即PX4v1和Pixhawk）上，它用USB连接。 所以只需用你最喜欢的串口程序连接USB设备（波特率并不重要）。
+烧录完示例后，您可以通过连接到控制台来查看输出。 控制台取决于电路板的类型。 
+在PX4板（即PX4v1和Pixhawk）上，它用USB连接。 所以只需用你最喜欢的串口程序连接USB设备（波特率并不重要）。
 
 例如，如果您安装了mavproxy，可以在Linux上连接Pixhawk：
 
