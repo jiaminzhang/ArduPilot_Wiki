@@ -68,3 +68,58 @@ ArduPilot支持来自不同制造商的各种传感器。 [测距仪](http://ard
 飞行代码的主线程定期运行（如copter为400hz），并通过驱动前端的方法访问最新的数据。 例如，为了计算最新的姿态估计，AHRS / EKF将从传感器驱动程序的前端读取最新的加速度计，陀螺仪和罗盘数据。
 
 该图像略有泛化，对于使用I2C或SPI的驱动程序，它们必须在后台线程中运行，以防其与传感器的高速通信影响主线程的性能，但是对于驱动程序使用串行（即UART）接口，它可以安全地在主线程中运行，因为底层串行驱动程序本身在后台收集数据并包含一个缓冲区。
+
+## 飞行代码与前端示例
+
+下面的示例显示了飞行代码如何从测距仪（如：声纳，激光雷达）驱动中提取数据。 Copter代码的调度程序以20Hz调用read_rangefinder()方法。 下面是这个方法的图片，最新版本可以在sensors.cpp文件中看到。 rangefinder.update()和rangefinder.distance_cm()方法为调用驱动程序的前端。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver1.png)
+
+以下是测距仪驱动程序的前端更新方法。 这样可以让驱动程序有机会在主线程内进行任何通常处理。 依次调用每个后端的更新方法。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver2.png)
+
+## UART /串行后端示例
+
+接下来是使用串行协议的LightWare后端的更新方法。 如用户维基上所述，串行测距仪可以连接到任何飞行控制器的串行端口，但用户必须通过设置SERIALX_BAUD和SERIALX_PROTOCOL参数指定哪个串行端口以及设置波特率。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver-uart1.png)
+
+在LightWare串行驱动程序的启动代码中，首先通过查找上述参数设置的serial_manager类查找用户想要使用哪个UART。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver8.png)
+
+每当驱动程序的后端update()方法被调用时，它将调用get_reading方法，该方法检查新的字符是否已经从传感器到达，然后进行解码。
+
+如上所述，由于串行协议实现了自己的缓冲，因此传感器中任何数据（参见get_reading方法）的处理都在主线程中运行。 即，没有“register_periodic_callback”，就像您将在I2C和SPI驱动程序中看到的那样。
+
+## I2C后端示例
+
+此示例显示Lightware I2C驱动程序的后端。 在这种情况下，前端获取I2C总线，并在初始化期间将其传递到后端。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver5.png)
+
+后端的init方法然后注册它的“timer”方法使它以20hz的频率被调用。 在定时器方法（图中未标出）中，调用从传感器读取字节的get_reading()方法，并将距离转换为厘米。
+
+## SPI后端示例
+
+本例显示了MPU9250 IMU的后端，包括陀螺仪，加速度计和罗盘。 前端获取SPI总线，并在初始化期间将其传递到后端。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver6.png)
+
+在初始化期间调用start()方法并配置传感器。 它使用信号量来确保在同一总线上不会干扰其他SPI器件。
+
+_read_sample方法被注册，以便在1000hz被调用。 注意，没有必要在_read_sample方法中减少/增加信号量，因为这是作为定期回调代码的一部分完成的。
+
+_block_read方法显示了如何从传感器的寄存器读取数据。
+
+![](http://ardupilot.org/dev/_images/code-overview-sensor-driver7.png)
+
+## 附加建议
+
+当编写传感器驱动程序时，不要包含任何等待或延时代码，因为这将延迟与正在使用的总线相关联的主线程或后台线程。
+
+如果写了一个新的库，它必须被添加到飞行目录（即ardupilot / ArduCopter / make.inc和/ ardupilot / ArduCopter / wscript）中的make.inc和wscript文件中，以便链接时能够找到。
+
+
+
