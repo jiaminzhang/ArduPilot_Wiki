@@ -10,10 +10,10 @@
 * libraries/AP_Baro/examples/BARO_generic
 * libraries/AP_AHRS/examples/AHRS_Test
 
-例如，以下操作将在Pixhawk上构建并安装AP_GPS示例草图：（上述命令在windows平台下的PX4 Console下不能执行，需要在Linux平台下（或者在Windows10下的Ubuntu下））
+例如，以下操作将在Pixhawk上构建并安装AP_GPS示例草图：（上述命令在windows平台下的PX4 Console下不能执行，需要在Linux平台下或者在Windows10下的Ubuntu下）
 
 ```
-cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
+cd $ARDUPILOT_HOME    # AruPilot库的顶级目录，也就是/ardupilot目录
 ./waf configure --board=px4-v2
 ```
 执行结果如下图：
@@ -32,7 +32,7 @@ cd $ARDUPILOT_HOME # AruPilot库的顶级目录，也就是/ardupilot目录
 
 ![](/Dev/waf-build.png)
 
-waf可以列出它可以构建的示例：
+waf可以列出它能够构建的所以示例：
 
 ```
 cd $ARDUPILOT_HOME
@@ -40,9 +40,9 @@ cd $ARDUPILOT_HOME
 ```
 
 烧录完示例后，您可以通过连接到控制台来查看输出。 控制台取决于电路板的类型。 
-在PX4板（即PX4v1和Pixhawk）上，它用USB连接。 所以只需用你最喜欢的串口程序连接USB设备（波特率并不重要）。
+在PX4板（即PX4v1和Pixhawk）上，它用USB连接。 所以只需用你最喜欢的串口助手连接USB设备（波特率并不重要）。
 
-例如，如果您安装了mavproxy，可以在Linux上连接Pixhawk：
+如果您安装了mavproxy，你可以在Linux上连接Pixhawk：
 
 ```
 mavproxy.py --setup --master /dev/serial/by-id/usb-3D_Robotics_PX4_FMU_v2.x_0-if00
