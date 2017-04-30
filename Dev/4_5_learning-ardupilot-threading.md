@@ -43,16 +43,16 @@ hal.scheduler->register_timer_process(AP_HAL_MEMBERPROC(&AP_Baro_MS5611::_update
 
 如果您有Pixhawk，那么您现在还应该设置一个调试控制台，并附加到nsh控制台（串口5）。波特率设置为57600，连接好后，尝试“ps”命令，你会得到这样的东西：
 ```
-PID   PRI   SCHD  TYPE  NP      STATE   NAME
- 0    0     FIFO  TASK  READY   Idle    Task()
- 1 192 FIFO KTHREAD WAITSIG hpwork()
- 2 50 FIFO KTHREAD WAITSIG lpwork()
- 3 100 FIFO TASK RUNNING init()
- 37 180 FIFO TASK WAITSEM AHRS_Test()
- 38 181 FIFO PTHREAD WAITSEM <pthread>(20005400)
- 39 60 FIFO PTHREAD READY <pthread>(20005400)
- 40 59 FIFO PTHREAD WAITSEM <pthread>(20005400)
- 10 240 FIFO TASK WAITSEM px4io()
- 13 100 FIFO TASK WAITSEM fmuservo()
- 30 240 FIFO TASK WAITSEM uavcan()
+PID   PRI   SCHD   TYPE    NP      STATE   NAME
+ 0    0     FIFO   TASK    READY   Idle    Task()
+ 1   192    FIFO   KTHREAD WAITSIG         hpwork()
+ 2   50     FIFO   KTHREAD WAITSIG         lpwork()
+ 3   100    FIFO   TASK    RUNNING         init()
+ 37  180    FIFO   TASK    WAITSEM         AHRS_Test()
+ 38  181    FIFO   PTHREAD WAITSEM <pthread>(20005400)
+ 39  60     FIFO   PTHREAD READY <pthread>(20005400)
+ 40  59     FIFO   PTHREAD WAITSEM <pthread>(20005400)
+ 10  240    FIFO   TASK    WAITSEM         px4io()
+ 13  100    FIFO   TASK    WAITSEM         fmuservo()
+ 30  240    FIFO   TASK    WAITSEM         uavcan()
 ```
