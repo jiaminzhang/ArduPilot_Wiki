@@ -50,9 +50,22 @@ PID   PRI   SCHD   TYPE    NP      STATE   NAME
  3   100    FIFO   TASK    RUNNING         init()
  37  180    FIFO   TASK    WAITSEM         AHRS_Test()
  38  181    FIFO   PTHREAD WAITSEM <pthread>(20005400)
- 39  60     FIFO   PTHREAD READY <pthread>(20005400)
+ 39  60     FIFO   PTHREAD READY   <pthread>(20005400)
  40  59     FIFO   PTHREAD WAITSEM <pthread>(20005400)
  10  240    FIFO   TASK    WAITSEM         px4io()
  13  100    FIFO   TASK    WAITSEM         fmuservo()
  30  240    FIFO   TASK    WAITSEM         uavcan()
 ```
+
+在此示例中，您可以看到“AHRS_Test”线程，它从libraries / AP_AHRS / examples / AHRS_Test运行示例草图。 您还可以看到定时器线程（优先级priority 181），UART线程（优先级priority 为60）和IO线程（优先级priority 59）。
+
+此外，您可以看到px4io，fmuservo，uavcan，lpwork，hpwork和 idle tasks（空闲任务）。 更多内容以后介绍。
+
+其他AP_HAL端口有更多或更少的线程取决于它需要什么。
+
+线程的一个常见用途是为驱动程序提供一种能够处理耗时较长任务的同时不会中断主要的自动驾驶飞行代码。 例如，AP_Terrain库需要能够对microSD卡执行文件IO（存储和检索地形数据）。 它的做法是调用函数hal.scheduler-> register_io_process()，如下所示：
+
+```
+hal.scheduler->register_io_process(AP_HAL_MEMBERPROC(&AP_Terrain::io_timer));
+```
+设置要定期调用的AP_Terrain :: io_timer函数。 这被称为板上IO线程，这意味着它是一个低实时优先级，适用于存储IO任务。 重要的是，像这种低实时IO任务不会在定时器线程上被调用，因为它们会占用处理相对更重要的高速传感器数据的时间。
